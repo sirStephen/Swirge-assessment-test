@@ -2,21 +2,26 @@
 
 import fetch from "node-fetch";
 import config from "../../config.js";
-import model from "../../models/index.js";
 
 const functions = {
-  getListFromAPI: async function () {
-    const path = "/facts";
+	getListFromAPI: async function () {
+		// get 5 cat facts
+		const path = "/facts?amount=5";
 
-    fetch(`${config.source.url}${path}`, {
-      compress: true,
-      timeout: 60e3, // 60s timeout as default
-      follow: 0,
-      headers: {
-        "content-type": "application/json",
-      },
-    });
-  }
+		const response = await fetch(`${config.source.url}${path}`, {
+			//method of request
+			method: 'GET',
+			compress: true,
+			// timeout: 60e3, // 60s timeout as default
+			follow: 0,
+			headers: {
+				"content-type": "application/json",
+			},
+		});
+
+		const data = await response.json()
+		return data;
+	}
 };
 
 export default functions;
