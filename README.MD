@@ -23,9 +23,9 @@
 
 ## Goals:
 1. Get a list of 5 cat facts from public API
-3. Assuming mysql is installed at localhost:3306, save the list to the database and get it on next load
-4. Add the functionality to get a single record, update and delete saved record
-3. Write unit test and/or integrated test for all functionalities
+2. Assuming mysql is installed at localhost:3306, save the list to the database and get it on next load
+3. Add the functionality to get a single record, update and delete saved record
+4. Write unit test and/or integrated test for all functionalities
 
 ## Steps:
 1. Clone this repo

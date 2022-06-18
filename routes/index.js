@@ -3,10 +3,10 @@
 import { Router } from "express";
 
 // Import routes
-import catRoutes from "./catFacts.js";
+import catRoutes from "./catfactsRouter.js";
 
 const router = Router({
-  caseSensitive: true,
+    caseSensitive: true,
 });
 
 // use imported routes in router
