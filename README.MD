@@ -1,4 +1,4 @@
-# software-engineer-test
+# Software-Engineer-Test 
 
 ## Overview:
 1. This test is owned by Swirge and is solely used to facilitate Swirge interview process only. 
@@ -9,35 +9,59 @@
     d) Unit test with jest
 3. This test is intented to solve real life scenario with open book concepts. 
 
-## Test objectives:
-1. Ability to setup and run nodejs application
-2. Understanding of how API works, through routing in expressjs
-3. Understanding of basic error handling
-4. Understanding of basic CRUD operations with mysql
-5. Know how to write unit test and/or integration test 
+## Features
+1. Fetch list of 5 cat facts from public API and insert into a mysql database.
+2. Fetch a single record of a cat fact.
+3. Update cat fact.
+4. Delete saved record of a cat fact.
 
 ## Prerequisite:
 1. Have git, npm installed and running in local machine
 2. Have mysql installed in local machine
 3. Use node version > v14.17.2
 
-## Goals:
-1. Get a list of 5 cat facts from public API
-2. Assuming mysql is installed at localhost:3306, save the list to the database and get it on next load
-3. Add the functionality to get a single record, update and delete saved record
-4. Write unit test and/or integrated test for all functionalities
+## Tech Tools
+<ul>
+  <li><a href="https://nodejs.org/en/">Node js</a></li>
+  <li><a href="https://expressjs.com/">Express js</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript es6+</a></li>
+  <li><a href="https://jestjs.io/">Jest</a></li>
+  <li><a href="https://github.com/visionmedia/supertest">Supertest</a></li>
+</ul>
 
-## Steps:
-1. Clone this repo
-2. Fill in the blanks in code and get server up and running in local
-3. Create basic implementation of CRUD operations for predefined data
-4. Write test to cover server functionalities, especially API
-5. Do proper error handling to tackle network issues (4xx, 5xx errors)
-6. Zip the files (without node_modules) and email to dmb@swirge.com
+## Api Endpoints
+| Endpoints                           | Functionalities                             |
+| ------------------------------------| ------------------------------------------- |
+| POST _/api/v1/addcatfacts_          | fetches and insert records into DB          |
+| GET _/api/v1/allcatfacts_           | get all cat records                         |
+| GET _/api/v1/onecatfact/:id_        | gets a specific record                      |
+| PUT _/api/v1/updatecatfact/:id_     | update a specific record                    |
+| DELETE _/api/v1/deletecatfact/:id_  | delete a specific record                    |
 
-## Bonus Tips:
-1. Showcase your ability to write clean code
-2. Showcase your understanding on object-oriented programming concepts using javascript
-3. You may change the structure of the files to achieve the same goals
-4. Using standard library will be a plus
-5. Commenting your thinking flow and add function definition will be a big plus
+## Get Started
+**1. clone repo and cd into directory**
+```
+git clone _https://github.com/sirStephen/Swirge-assessment-test.git_
+```
+
+**2. install dependencies**
+```
+npm install
+```
+
+**3. start app**
+```
+npm run dev
+```
+
+**4. test**
+- Before running test, navigate to folder /model/index.js
+- replace delelopment to test as seen
+```const env = process.env.NODE_ENV || "development";```
+<img src="./image/test.png" />
+- run npm run dev
+- fetch cat facts record and insert into test database through route POST _/api/v1/addcatfacts_
+- run npm run test
+
+## Author
+Gregory Otiono

@@ -12,7 +12,7 @@ const functions = {
 			//method of request
 			method: 'GET',
 			compress: true,
-			// timeout: 60e3, // 60s timeout as default
+			timeout: 60e3, // 60s timeout as default
 			follow: 0,
 			headers: {
 				"content-type": "application/json",

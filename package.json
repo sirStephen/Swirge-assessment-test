@@ -5,8 +5,9 @@
   "description": "swg test usage only",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon --exec babel-node ./server.js",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage --forceExit",
+    "test:watch": "npm run test -- --watch"
   },
   "author": "Chiwuzoh Daniel (https://chiwuzoh.com.ng/)",
   "license": "ISC",
@@ -19,6 +20,10 @@
     "sequelize": "^6.20.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.18.5",
+    "@babel/node": "^7.18.5",
+    "@babel/preset-env": "^7.18.2",
+    "jest": "^28.1.1",
     "nodemon": "^2.0.16",
     "sequelize-cli": "^6.4.1"
   }
