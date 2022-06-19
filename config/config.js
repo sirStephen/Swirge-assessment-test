@@ -10,9 +10,18 @@ const baseConfig = {
 	dialect: "mysql"
 };
 
+const testbaseConfig = {
+	username: process.env.TEST_DB_USERNAME,
+	password: process.env.TEST_DB_PASSWORD,
+	database: process.env.TEST_DB_DATABASE,
+	host: process.env.TEST_DB_HOST,
+	port: process.env.TEST_DB_PORT,
+	dialect: "mysql"
+};
+
 const dbConfig = {
 	development: baseConfig,
-	test: baseConfig,
+	test: testbaseConfig,
 	production: Object.assign(
 		{
 			logging: false,

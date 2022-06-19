@@ -23,7 +23,7 @@ app.use('/api/v1', routes);
 
 // simple route
 app.get("/", (req, res) =>
-	res.status(200).send({
+	res.status(200).json({
 		message: "Welcome to the beginning of nothingness.",
 	})
 );
