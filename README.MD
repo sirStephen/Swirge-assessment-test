@@ -60,9 +60,11 @@ npm run dev
 ```const env = process.env.NODE_ENV || "development";```
 <img src="./image/test.png" />
 
-- run ```npm run dev```
+- run 
+```npm run dev```
 - make a post request through route POST /api/v1/addcatfacts to fetch cat fact records from public API that will insert into the test database.
-- run ```npm run test```
+- run 
+```npm run test```
 
 ## Author
 Gregory Otiono
