@@ -56,7 +56,7 @@ npm run dev
 
 **4. test**
 - Before running test, navigate to folder /model/index.js
-- replace delelopment to test as seen
+- replace "development" with "test" as seen
 ```const env = process.env.NODE_ENV || "development";```
 <img src="./image/test.png" />
 
