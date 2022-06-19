@@ -59,9 +59,11 @@ npm run dev
 - replace delelopment to test as seen
 ```const env = process.env.NODE_ENV || "development";```
 <img src="./image/test.png" />
-- run npm run dev
-- fetch cat facts record and insert into test database through route POST _/api/v1/addcatfacts_
-- run npm run test
+
+- run ```npm run dev```
+- make a post request through route POST /api/v1/addcatfacts to fetch cat fact records from public API that will insert into the test database.
+- run ```npm run test```
 
 ## Author
 Gregory Otiono
+<a href="https://github.com/sirStephen/Swirge-assessment-test">https://github.com/sirStephen/Swirge-assessment-test</a>
